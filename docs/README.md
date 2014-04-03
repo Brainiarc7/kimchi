@@ -113,6 +113,35 @@ Run
 
     $ sudo kimchid --host=0.0.0.0
 
+
+For Arch Linux users:
+
+Install Kimchi from the AUR using any of the preferred methods below:
+
+1. Using an AUR helper such as packer:
+   With packer, do:
+
+    packer -S --noedit kimchi
+    
+2. With makepkg:
+   Download the PKGBUILD from AUR:
+
+   wget -c -v https://aur.archlinux.org/packages/ki/kimchi/PKGBUILD
+   
+   Install:
+   makepkg -s -c PKGBUILD
+   
+   The -s flag satisfies dependenies automatically. The -c flag cleans up the working directories after the package is      built.
+   
+3. Install the built package:
+   sudo pacman -S --needed *.pkg.tar.xz
+   
+   Run that command from the same directory as you did makepkg.
+
+EXTRA NOTES:
+
+Before you set up kimchi, make sure that linvirt is installed and set up correctly, and that its' configuration allows it to run as a service. This is VERY important!
+
 Usage
 -----
 
